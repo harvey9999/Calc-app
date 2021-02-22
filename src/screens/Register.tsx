@@ -28,8 +28,8 @@ const LoginScreen = ({ navigation }: Props) => {
       setPassword({ ...password, error: passwordError });
       return;
     }
-    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
-    .then(() => {navigation.navigate('Dashboard');
+    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+    .then(() => {navigation.navigate('Login');
   })
   };
 
@@ -63,7 +63,7 @@ const LoginScreen = ({ navigation }: Props) => {
       />
 
       <Button mode="contained" onPress={_onLoginPressed}>
-        Login
+        Register
       </Button>
       <Button mode="contained" onPress={() => navigation.navigate('Home')}>
         Back
