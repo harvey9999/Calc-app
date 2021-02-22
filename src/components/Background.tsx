@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import colors from '../components/calculator/colors';
 import {
   StyleSheet,
   KeyboardAvoidingView, View,
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
+    backgroundColor: colors["teal-darkest"]
   },
   container: {
     flex: 1,

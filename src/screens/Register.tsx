@@ -6,31 +6,42 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 import { theme } from '../core/theme';
-import { emailValidator, passwordValidator } from '../core/utils';
+import { emailValidator, passwordValidator} from '../core/utils';
 import { Navigation } from '../types';
 import firebase from 'firebase';
+import { LoginScreen } from '.';
 
 
 type Props = {
   navigation: Navigation;
 };
 
-const LoginScreen = ({ navigation }: Props) => {
+const RegisterScreen = ({ navigation }: Props) => {
   const [email, setEmail] = useState({ value: '', error: '' });
   const [password, setPassword] = useState({ value: '', error: '' });
+  // const [confirmPassword, setConfirmPassword] = useState({
+  //   value: '',
+  //   error: '',
+  // });
 
-  const _onLoginPressed = () => {
+  const _onSignUpPressed = () => {
     const emailError = emailValidator(email.value);
     const passwordError = passwordValidator(password.value);
+    // const confirmPasswordError = confirmPasswordValidator(
+    // password.value,
+    // confirmPassword.value)
 
-    if (emailError || passwordError) {
+    if (emailError || passwordError ) {
       setEmail({ ...email, error: emailError });
       setPassword({ ...password, error: passwordError });
+      // setConfirmPassword({ ...confirmPassword, error: confirmPasswordError });
       return;
     }
-    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
-    .then(() => {navigation.navigate('Login');
-  })
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(email.value, password.value)
+    .then(() => navigation.navigate('Dashboard'))
+    .catch((err) => alert(err));
   };
 
   return (
@@ -62,7 +73,7 @@ const LoginScreen = ({ navigation }: Props) => {
         secureTextEntry
       />
 
-      <Button mode="contained" onPress={_onLoginPressed}>
+      <Button mode="contained" onPress={_onSignUpPressed}>
         Register
       </Button>
       <Button mode="contained" onPress={() => navigation.navigate('Home')}>
@@ -91,4 +102,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(LoginScreen);
+export default memo(RegisterScreen);
