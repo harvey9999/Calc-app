@@ -5,6 +5,7 @@ import Paragraph from '../components/Paragraph';
 import Button from '../components/Button';
 import { Navigation } from '../types';
 import Background from '../components/Background';
+import Calculator from '../components/Calculator'
 
 type Props = {
   navigation: Navigation;
@@ -12,12 +13,14 @@ type Props = {
 
 const Dashboard = ({ navigation }: Props) => (
   <Background>
-    <Logo />
+    {/* <Logo />
     <Header>Let’s start</Header>
     <Paragraph>
       Your amazing app starts here. Open you favourite code editor and start
       editing this project.
-    </Paragraph>
+      
+    </Paragraph> */}
+    <Calculator  />
     <Button mode="outlined" onPress={() => navigation.navigate('LoginScreen')}>
       Logout
     </Button>
