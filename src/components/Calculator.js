@@ -25,6 +25,12 @@ export default class App extends Component {
         result: ''
       })
     }
+    else if(operation === 'DEL') {
+      this.setState({
+        display: this.state.result.slice(0, -1),
+        result: this.state.result.slice(0, -1)
+      })
+    }
     else {
       const display = this.state.display + operation
       let result = this.state.result
@@ -33,6 +39,8 @@ export default class App extends Component {
         let fixedOperation = display.split('×').join('*')
         fixedOperation = fixedOperation.split('÷').join('/')
         fixedOperation = fixedOperation.split(',').join('.')
+        //
+        // fixedOperation = fixedOperation.split('DEL').join('')
 
         result = new String(eval(fixedOperation)).toString()
 

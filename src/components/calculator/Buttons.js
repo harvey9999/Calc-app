@@ -17,7 +17,7 @@ class Buttons extends Component {
       ['1', '2', '3'],
       ['.', '0', '='],
     ]
-    const operations = ['C', '÷', '×', '-', '+']
+    const operations = ['C', '÷', '×', '-', '+', 'DEL']
     return (
       <View style={styles.container}>
         <SafeAreaView style={styles.numbers}>
