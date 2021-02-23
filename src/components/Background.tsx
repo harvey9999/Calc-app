@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
-    backgroundColor: colors["teal-darkest"]
+    backgroundColor: "#132a3a"
   },
   container: {
     flex: 1,

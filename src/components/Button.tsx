@@ -25,12 +25,13 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     marginVertical: 10,
+    backgroundColor: "#132a3a"
   },
   text: {
     fontWeight: 'bold',
     fontSize: 15,
     lineHeight: 26,
-    textColor: "grey"
+    color: 'white'
   },
 });
 

@@ -24,7 +24,10 @@ const styles = StyleSheet.create({
     marginVertical: 12,
   },
   input: {
-    backgroundColor: theme.colors.surface,
+    // color: 'green'
+    // backgroundColor: theme.colors.surface,
+    // backgroundColor: '#1c1f1d',
+
   },
   error: {
     fontSize: 14,

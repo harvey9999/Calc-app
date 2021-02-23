@@ -8,10 +8,6 @@ class Button extends Component {
     this.props.operation(this.props.char)
   }
 
-  componentDidMount = () => {
-    //console.log(this.props)
-  }
-
   render() {
     return (
       <TouchableOpacity

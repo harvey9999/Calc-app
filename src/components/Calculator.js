@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // alignItems: 'stretch',
     backgroundColor: colors.darker,
-    maxWidth: 300,
-    minWidth: 300
+    // minHeight: '100%',
+    maxWidth: '150%',
+    minWidth: '150%'
   },
 });
