@@ -9,14 +9,15 @@ export default class App extends Component {
 
   state = {
     display: '',
-    result: ''
+    result: '0'
   }
 
   handleOperation = operation => {
+    // if (operation === '0' ) {}
     if (operation === 'C') {
       this.setState({
         display: '',
-        result: ''
+        result: '0'
       })
     }
     else if(operation === '=') {
@@ -30,6 +31,12 @@ export default class App extends Component {
         display: this.state.result.slice(0, -1),
         result: this.state.result.slice(0, -1)
       })
+      // if (this.state.result.length === 1) {
+      //   this.setState({
+      //     display: '0',
+      //     result: '0'
+      //   })
+      // }
     }
     else {
       const display = this.state.display + operation

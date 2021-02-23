@@ -21,7 +21,7 @@ const Dashboard = ({ navigation }: Props) => (
       
     </Paragraph> */}
     <Calculator  />
-    <Button mode="outlined" onPress={() => navigation.navigate('LoginScreen')}>
+    <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
       Logout
     </Button>
   </Background>

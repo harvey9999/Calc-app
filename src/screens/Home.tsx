@@ -16,10 +16,10 @@ const Dashboard = ({ navigation }: Props) => (
     <Header>Let’s start</Header>
     <Paragraph>
     </Paragraph>
-    <Button mode="outlined" onPress={() => navigation.navigate('LoginScreen')}>
+    <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
       Login
     </Button>
-    <Button mode="outlined" onPress={() => navigation.navigate('Register')}>
+    <Button mode="contained" onPress={() => navigation.navigate('Register')}>
       Register
     </Button>
   </Background>
