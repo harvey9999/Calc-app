@@ -13,8 +13,16 @@ export const passwordValidator = (password: string) => {
   return '';
 };
 
-export const nameValidator = (name: string) => {
-  if (!name || name.length <= 0) return 'Name cannot be empty.';
-
+export const confirmPasswordValidator = (
+  password: string,
+  confirmPassword: string
+) => {
+  if (
+    !password ||
+    !confirmPassword ||
+    confirmPassword.length <= 5 ||
+    password !== confirmPassword
+  )
+    return 'Password must match.';
   return '';
 };
